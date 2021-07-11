@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"  class="no-js .box-border"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>YS | Frontend Developer</title>
+        <meta name="description" content="AOE Portfolio website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Teko&display=swap" rel="stylesheet">
+
+        <!-- unicons link -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+        
+        <!-- font awesome css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+        <!-- css.gg -->
+        <link href='https://css.gg/css' rel='stylesheet'>
+
+        <!-- tailwind  css -->
+        <link rel="stylesheet" href="assets/css/tailwind.css">
+
+        <!-- AOS css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    <body class="text-white m-0 p-0 box-border xl:container xl:mx-auto xl:my-0 bg-portblack text-sm">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--=============================================>>>>>
+        = Header section begins =
+        ===============================================>>>>-->
+        <header>
+            <!--=============================================>>>>>
+            = Navigation bar section begins =
+            ===============================================>>>>-->
+            <nav class="bg-portblack relative text-sm">
+
+                <!--=============================================>>>>>
+                = Navigation bar on mobile section begins =
+                ===============================================>>>>-->
+                <div id="small-nav" class=" fixed z-20 bg-portblack nav-sm flex md:hidden items-center justify-between pt-6 px-8 pb-3 w-screen h-auto">
+                    
+                    <div>
+                        <a class="block" href="#"><img class="h-6" src="assets/images/yslogo.png" alt="ys Logo" srcset=""></a>
+
+                    </div>
+
+                    <div>
+                        <button id="ham"  type="button" onclick="openNav()" role="button" class="block text-white  focus:text-portred  focus:outline-none hover:text-portred sec">
+                            <i class="gg-menu-right"></i>
+                        </button>
+
+                    </div>
+                    
+                </div>
+                
+                <!-- navbox on mobile -->
+                <div id="navbox" class="md:hidden z-30 overflow-x-hidden navbox  flex-col font-semibold bg-portblack text-white fixed left-0 top-0 h-screen w-0 .text-6xl">
+                    
+                    <button type="button" onclick="openNav()" role="button" class="absolute cursor-pointer close-icon text-white focus:text-portred focus:outline-none hover:text-portred sec">
+                        <i class="gg-close-o cursor-pointer"></i>
+                    </button>
+                    
+                    <div class="text-center pt-16">
+                        <a href="#about" onclick="openNav()" class="block text-1xl m-8 hover:text-portred gold">
+                            About
+                        </a>
+                        <a href="#works" onclick="openNav()"  class="block text-1xl m-8  hover:text-portred gold">
+                            Work
+                        </a>
+                        
+                        <a onclick="openNav()" href="#contact" class="block text-1xl m-8  hover:text-portred gold">
+                            Contact
+                        </a>
+                        
+                        <a onclick="openNav()" href="https://drive.google.com/file/d/1oQPydikQ98w2kC9yJoLDcVp0swyu23Af/view?usp=sharing" class="text-1xl text-center block m-8 px-4 py-4 leading-none border text-white border-portred hover:border-transparent hover:text-white hover:bg-portred ">
+                            Resume
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <!--= End of Navigation Bar on mobile Section =*/-->
+                <!--=============================================<<<<<-->
+
+                <!--=============================================>>>>>
+                = Navigation bar on large screens section begins =
+                ===============================================>>>>-->
+                <div id="large-nav" class="fixed  xl:container xl:mx-auto xl:my-0 z-20 bg-portblack nav-lg hidden md:flex items-center justify-between pt-6 px-12 lg:px-20 pb-4 w-screen h-auto">
+                    
+                    <div>
+                        <a class="block" href="#"><img class="h-8 " src="assets/images/yslogo.png" alt="ys logo" srcset=""></a>
+
+                    </div>
+
+                    <!-- right side -->
+                    <div class="flex flex-shrink-0 items-center text-white  font-semibold">
+                       
+                        <a href="#about" class="block mx-2 lg:mx-3  hover:text-portred gold">
+                            About
+                        </a>
+                        <a href="#works" class="block mx-2 lg:mx-3  hover:text-portred gold">
+                            Work
+                        </a>
+                        
+                        <a  href="#contact" class="block mx-2 lg:mx-3  hover:text-portred gold">
+                            Contact
+                        </a>
+                        <a href="https://drive.google.com/file/d/1oQPydikQ98w2kC9yJoLDcVp0swyu23Af/view?usp=sharing" class="text-1xl text-center block w-2/4 mx-2 lg:mx-3 py-3 px-6 leading-none border border-portred hover:border-transparent hover:text-white hover:bg-portred ">
+                            Resume
+                        </a>
+                        
+
+                    </div>
+
+                    <!--= End of Navigation Bar on large screens Section =*/-->
+                    <!--=============================================<<<<<-->
+                    
+                </div>
+
+            </nav>
+            <!--= End of Navigation Bar Section =*/-->
+            <!--=============================================<<<<<-->
+
+        </header>
+        <!--= End of entire Header Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <!--= Top banner Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <section class="h-screen md:h-auto lg:py-40 pb-10 pt-4 md:pt-24 px-8 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 banner-div bg-no-repeat" data-aos="fade-left" data-aos-duration="3000">
+            <div class="h-screen md:h-auto flex flex-row items-center justify-between">
+                <div >
+                    <p class="text-white md:text-base mb-2">Hi👋, I'm</p>
+                    <h1 class="text-portred font-bold text-base lg:text-2xl">YOUNES BACHOUCHE.</h1>
+                    <h1 class="text-portred font-bold text-2xl md:text-3xl lg:text-5xl code-text tracking-widest">I CODE THINGS </h1>
+                    <h1 class="text-portred font-bold text-2xl md:text-3xl lg:text-5xl code-text tracking-widest">FOR THE WEB. </h1>
+                    <p class="text-white mb-4">I'm a Frontend Developer who builds creative <br>and efficient web applications.</p>
+                    <div class="mt-2">
+                        <a href="mailto:amodue15@gmail.com" class="inline-block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3 mb-2">Hire Me</a>
+                        <a href="mailto:amodue15@gmail.com" class="inline-block py-2 px-4 md:px-8 bg-transparent border border-portred text-white hover:border-none hover:bg-portred">Get&nbsp;in&nbsp;touch</a>
+
+                    </div>
+                </div>
+                <div class="md:hidden flex flex-col" >
+                    <div class="mb-3"><a href="https://twitter.com/younes_uvl07"><img class="h-8" src="assets/images/twitter.svg" alt="twitter icon"></a></div>
+                    <div class="mb-3"><a href="https://www.linkedin.com/in/younesbachouche/"><img class="h-8" src="assets/images/linkedin.svg" alt="linkedin icon"></a></div>
+                    <div class="mb-3"><a href="https://github.com/younesbachouche/"><img class="h-8" src="assets/images/github.svg" alt="github icon"></a></div>
+                    <div class="mb-3"><a href="mailto:yunes.dev@gmail.com"><img class="h-8" src="assets/images/email.svg" alt="email icon"></a></div>
+                </div>
+            </div>
+
+            <div class="md:flex flex-row-reverse  face-div bg-no-repeat hidden" data-aos="fade-left" data-aos-duration="3000" >   
+                <div class="flex flex-col pt-8">
+                    <div class="mb-3"><a href="https://twitter.com/younes_uvl07"><img class="h-8" src="assets/images/twitter.svg" alt="twitter icon"></a></div>
+                    <div class="mb-3"><a href="https://www.linkedin.com/in/younesbachouche/"><img class="h-8" src="assets/images/linkedin.svg" alt="linkedin icon"></a></div>
+                    <div class="mb-3"><a href="https://github.com/younesbachouche/"><img class="h-8" src="assets/images/github.svg" alt="github icon"></a></div>
+                    <div class="mb-3"><a href="mailto:yunes.dev@gmail.com"><img class="h-8" src="assets/images/email.svg" alt="email icon"></a></div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!--=End of  Top banner Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <!--=About Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <section id="about" class="px-8 md:px-12 lg:px-20 bg-portgrey py-16 flex flex-col-reverse md:flex-row bg-clip-padding ">
+            <div class="w-full md:w-1/2 pr-6" data-aos="fade-up-left" data-aos-duration="3000">
+                <img class="h-8/12" src="assets/images/about-img.svg" alt="about image">
+            </div>
+            <div class="w-full md:w-1/2 mb-12 md:mb-0 lg:pt-12" data-aos="fade-up-right" data-aos-duration="3000">
+                <h1 class="text-2xl md:text-3xl">About&nbsp;Me</h1>
+                <p class="mb-4 lg:mb-8"><svg width="78" height="3" viewBox="0 0 78 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="78" height="3" fill="url(#paint0_linear)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="0" y1="1.5" x2="78" y2="1.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FE2D2D"/>
+                    <stop offset="1" stop-color="#ED2F1C"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                </p>
+                <p class="mb-3 lg:mb-6">Hello! I'm Younes, a Frontend developer based in Algiers, Algeria.
+                    I enjoy coding stuff,mostly those found on the internet whether that be websites, web applications, 
+                    or anything in between. My goal is to always build products that provide pixel-perfect, 
+                    performant experiences.
+                    
+                </p>
+             
+            </div>
+        </section>
+
+        <!--=End of About Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <!--=What i offer Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <section class="px-8 md:px-12 lg:px-20 py-16" >
+            <div data-aos="fade-right" data-aos-duration="3000">
+                <div class="text-center mb-8">
+                    <h1 class="text-2xl md:text-3xl">What&nbsp;I&nbsp;Offer</h1>
+                    <div class="flex justify-center items-center">
+                        <p class="mb-4 lg:mb-8 "><svg class="text-center" width="78" height="3" viewBox="0 0 78 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="78" height="3" fill="url(#paint0_linear)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear" x1="0" y1="1.5" x2="78" y2="1.5" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FE2D2D"/>
+                            <stop offset="1" stop-color="#ED2F1C"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12" >
+                    <div class="single-item">
+                        <!-- amzing ui svg image -->
+                        <div class="flex justify-center items-center h-24">
+                            <svg width="68" height="80" viewBox="0 0 68 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M52.9231 11.3846L39.6923 19.0769L55.3846 28V52L33.8462 64.6154L12.3077 52V35.0769L0 27.6923V60L33.8462 80L67.6923 60V20L52.9231 11.3846ZM46.7692 7.69231L33.8462 0L20.9231 7.69231L33.8462 15.3846L46.7692 7.69231Z" fill="url(#paint0_linear)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="0" y1="40" x2="67.6923" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FE2D2D"/>
+                                <stop offset="1" stop-color="#ED2F1C"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h1 class="text-2xl mb-2">Aesthetics</h1>
+                            <p>I deliver Websites that are not only aesthetic and easy to use, but also do not infringe on
+                                user experience principles.
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class="single-item">
+                        <!-- creative websites svg image -->
+                        <div class="flex justify-center items-center h-24">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.99651 52.6532C6.43651 57.0932 10.8132 59.9265 15.4832 59.9265H15.6665C16.0949 62.0176 17.2321 63.8966 18.8859 65.2461C20.5397 66.5956 22.6087 67.3329 24.7432 67.3332C26.2665 67.3332 27.6898 66.9499 28.9498 66.2898C29.4757 66.0015 29.9132 65.5756 30.2156 65.0578C30.518 64.5399 30.6739 63.9495 30.6665 63.3498V4.08984C30.6732 3.32617 30.4168 2.58349 29.9402 1.98672C29.4636 1.38996 28.7961 0.975538 28.0498 0.813177C26.3775 0.488362 24.6448 0.723846 23.1198 1.48318C20.6398 2.66984 19.1865 5.31984 19.1865 8.07651V8.25984C17.3305 7.88104 15.4031 8.08053 13.664 8.83141C11.925 9.58229 10.458 10.8484 9.46107 12.4591C8.4641 14.0697 7.98506 15.9473 8.08855 17.8387C8.19204 19.7301 8.87309 21.5443 10.0398 23.0365C7.42678 23.4459 5.04609 24.7758 3.32731 26.7861C1.60853 28.7965 0.664836 31.3549 0.666506 33.9998C0.666506 37.9265 2.70317 41.3698 5.77651 43.3732C4.34317 45.9432 3.87317 49.1932 4.99651 52.6532ZM57.9598 23.0365C59.1266 21.5443 59.8076 19.7301 59.9111 17.8387C60.0146 15.9473 59.5356 14.0697 58.5386 12.4591C57.5416 10.8484 56.0747 9.58229 54.3357 8.83141C52.5966 8.08053 50.6691 7.88104 48.8132 8.25984V8.07651C48.8132 5.32318 47.3565 2.66984 44.8765 1.48318C43.3528 0.72362 41.621 0.488109 39.9498 0.813177C39.2039 0.976111 38.5367 1.39069 38.0602 1.98732C37.5838 2.58396 37.3271 3.32633 37.3332 4.08984V63.3465C37.3332 64.5632 37.9732 65.7198 39.0532 66.2865C40.3132 66.9499 41.7332 67.3332 43.2565 67.3332C45.3915 67.3327 47.4608 66.595 49.1147 65.2449C50.7685 63.8947 51.9054 62.0149 52.3332 59.9232H52.5198C57.1865 59.9232 61.5665 57.0898 63.0065 52.6498C64.1298 49.1898 63.6598 45.9398 62.2265 43.3698C63.7921 42.3583 65.0796 40.971 65.9715 39.3343C66.8635 37.6977 67.3316 35.8638 67.3332 33.9998C67.3348 31.3549 66.3912 28.7965 64.6724 26.7861C62.9536 24.7758 60.5729 23.4459 57.9598 23.0365Z" fill="url(#paint0_linear)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="0.666504" y1="34.002" x2="67.3332" y2="34.002" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FE2D2D"/>
+                                <stop offset="1" stop-color="#ED2F1C"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                                
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h1 class="text-2xl mb-2">Creativity</h1>
+                            <p>Creativity is at the core of every product i build. I deliver websites and applications that
+                                are innovative and unique.
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class="single-item">
+                        <!-- Fast delivery svg image -->
+                        <div class="flex justify-center items-center h-24">
+                            <svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M49.0001 13.3333C50.7682 13.3333 52.4639 12.631 53.7141 11.3807C54.9644 10.1305 55.6668 8.43478 55.6668 6.66667C55.6668 4.89856 54.9644 3.20286 53.7141 1.95262C52.4639 0.702379 50.7682 0 49.0001 0C47.232 0 45.5363 0.702379 44.286 1.95262C43.0358 3.20286 42.3334 4.89856 42.3334 6.66667C42.3334 8.43478 43.0358 10.1305 44.286 11.3807C45.5363 12.631 47.232 13.3333 49.0001 13.3333ZM37.0001 59.6667L40.3334 45L47.3334 51.6667V71.6667H54.0001V46.6667L47.0001 40L49.0001 30C51.2838 32.6174 54.1016 34.7154 57.2639 36.1528C60.4263 37.5903 63.8597 38.3338 67.3334 38.3333V31.6667C61.4668 31.7667 56.0001 28.7 53.0001 23.6667L49.6668 18.3333C48.4668 16.3333 46.3334 15 44.0001 15C43.0001 15 42.3334 15.3333 41.3334 15.3333L24.0001 22.6667V38.3333H30.6667V27L36.6668 24.6667L31.3334 51.6667L15.0001 48.3333L13.6667 55L37.0001 59.6667ZM7.33342 25C6.44936 25 5.60151 24.6488 4.97639 24.0237C4.35127 23.3986 4.00008 22.5507 4.00008 21.6667C4.00008 20.7826 4.35127 19.9348 4.97639 19.3096C5.60151 18.6845 6.44936 18.3333 7.33342 18.3333H17.3334V25H7.33342ZM10.6667 11.6667C9.78269 11.6667 8.93485 11.3155 8.30973 10.6904C7.68461 10.0652 7.33342 9.21739 7.33342 8.33333C7.33342 7.44928 7.68461 6.60143 8.30973 5.97631C8.93485 5.35119 9.78269 5 10.6667 5H27.3334V11.6667H10.6667ZM4.00008 38.3333C3.11603 38.3333 2.26818 37.9821 1.64306 37.357C1.01794 36.7319 0.666748 35.8841 0.666748 35C0.666748 34.1159 1.01794 33.2681 1.64306 32.643C2.26818 32.0179 3.11603 31.6667 4.00008 31.6667H17.3334V38.3333H4.00008Z" fill="url(#paint0_linear)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="0.666748" y1="35.8333" x2="67.3334" y2="35.8333" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FE2D2D"/>
+                                <stop offset="1" stop-color="#ED2F1C"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>  
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h1 class="text-2xl mb-2">Speed </h1>
+                            <p>I deliver Websites and web applications in record time to ensure that your brand/business 
+                                does not experience unnecessary downtime.
+                            </p>
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+        </section>
+
+        <!--=End of what i offer Section =*/-->
+        <!--=============================================<<<<<-->
+
+
+        <!--=Tech i use Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <section class="px-8 md:px-12 lg:px-20 py-16 bg-portgrey" >
+            <div data-aos="fade-left" data-aos-duration="3000">
+                <div class="text-center mb-8">
+                    <h1 class="text-2xl md:text-3xl">Tech&nbsp;I&nbsp;Use</h1>
+                    <div class="flex justify-center items-center">
+                        <p class="mb-4 lg:mb-8 "><svg class="text-center" width="78" height="3" viewBox="0 0 78 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="78" height="3" fill="url(#paint0_linear)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear" x1="0" y1="1.5" x2="78" y2="1.5" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FE2D2D"/>
+                            <stop offset="1" stop-color="#ED2F1C"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+     
+                <div class="mt-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-5" >
+                    <div class="flex justify-center items-center mb-10 lg:mb-0"><img class="" src="assets/images/html.svg" alt="html image"></div>
+                    <div class="flex justify-center items-center mb-10 lg:mb-0"><img src="assets/images/css.svg" alt="css image"></div>
+					<div class="flex justify-center items-center mb-10 lg:mb-0"><img src="assets/images/js.svg" alt="js image"></div>
+                    <div class="flex justify-center items-center mb-10 lg:mb-0"><img src="assets/images/scss.svg" alt="scss image"></div>
+                    <div class="flex justify-center items-center mb-10 lg:mb-0"><img src="assets/images/bootstrap.svg" alt="bootstrap image"></div>
+                    <div class="flex justify-center items-center mb-10 lg:mb-0"><img src="assets/images/tailwindcss.svg" alt="tailwind image"></div>
+                    <div class="flex justify-center items-center mb-10 lg:mb-0"><img src="assets/images/jquery.svg" alt="jquery image"></div>
+					<div class="flex justify-center items-center mb-10 lg:mb-0"><img src="assets/images/angular.svg" alt="angular image"></div>
+                    <div class="flex justify-center items-center mb-10 lg:mb-0"><i class="text-portred fa-7x fab fa-git-alt"></i></div>
+                    
+    
+                </div>
+            </div>
+
+        </section>
+
+        <!--=End of Tech I Use Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <!--=Works Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <section id="works" class="works py-16 px-8 md:px-12 lg:px-20">
+            <div class="text-center mb-8">
+                <h1 class="text-2xl md:text-3xl">Stuff&nbsp;I've&nbsp;Built</h1>
+                <div class="flex justify-center items-center">
+                    <p class="mb-4 lg:mb-8 "><svg class="text-center" width="78" height="3" viewBox="0 0 78 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="78" height="3" fill="url(#paint0_linear)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear" x1="0" y1="1.5" x2="78" y2="1.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FE2D2D"/>
+                        <stop offset="1" stop-color="#ED2F1C"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                    </p>
+                </div>
+            </div>
+
+            <div class="works-holder relative">
+                <!-- svg frames -->
+                <svg class="absolute topleft top-0 left-0 " width="150" height="159" viewBox="0 0 186 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 159V3H185.5" stroke="url(#paint0_linear)" stroke-width="5"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="2.5" y1="81" x2="185.5" y2="81" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FE2D2D"/>
+                    <stop offset="1" stop-color="#ED2F1C"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+
+                <svg class="absolute bottomright bottom-0 right-0 " width="150" height="159" viewBox="0 0 186 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M183.5 0V156H0.5" stroke="url(#paint0_linear)" stroke-width="5"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="183.5" y1="78" x2="0.5" y2="78" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FE2D2D"/>
+                    <stop offset="1" stop-color="#ED2F1C"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                
+                <!-- first row of most important projects -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 works-div py-10 px-4">
+                    <!-- individual projects div -->
+                    <div onmouseover='showDetails("pixly-details")' onmouseout='hideDetails("pixly-details")' class="projects pixly-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6">
+                        <div id="pixly-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">Instagram Downloader</h3>
+                                <p class="mb-2">instagram pics&videos Downloader</p>
+                                <h3 class="mb-2">HTML , CSS , JS</h3> 
+                                <div class="flex flex-row justify-center items-center">
+                                    <a target='_blank' href="https://younesbachouche.github.io/instagram.downloader/" class="inline-block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+                                    <a href="https://github.com/younesbachouche/instagram.downloader" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                                </div> 
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("textify-details")' onmouseout='hideDetails("textify-details")' class="projects textify-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6">
+                        <div id="textify-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">YS Book Store</h3>
+                                <p class="mb-2">A placeholder text generator app</p>
+                                <h3 class="mb-2">HTML , CSS , JS | Bootstrap , jQuery</h3>  
+                                <div class="flex flex-row justify-center items-center">
+                                    <a target='_blank' href="https://younesbachouche.github.io/book-store/" class="inline-block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+                                <a href="https://github.com/younesbachouche/book-store" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("didalla-details")' onmouseout='hideDetails("didalla-details")' class="projects didalla-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6">
+                        <div id="didalla-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">Quran Player</h3>
+                                <p class="mb-2">Web APP Quran Player</p>
+                                <h3 class="mb-2">HTML , CSS , JS | Bootstrap , jQuery</h3> 
+								
+								<a target='_blank' href="https://younesbachouche.github.io/quranplayer/" class="inline-block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+								<a href="https://github.com/younesbachouche/quranplayer" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("apexx-details")' onmouseout='hideDetails("apexx-details")' class="projects apexx-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6">
+                        <div id="apexx-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">BMI Calculator</h3>
+                                <p class="mb-2">Simple BMI Calculator</p>
+                                <h3 class="mb-2">HTML , CSS , JS | Bootstrap , jQuery</h3>  
+                                <a target='_blank' href="https://younesbachouche.github.io/bmi.calculator/" class="inline-block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+								<a href="https://github.com/younesbachouche/bmi.calculator" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("todoapp-details")' onmouseout='hideDetails("todoapp-details")' class="projects todoapp-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6">
+                        <div id="todoapp-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">Perso Website</h3>
+                                <p class="mb-2">perso site web page</p>
+                                <h3 class="mb-2">HTML , CSS</h3>  
+                                <div class="flex flex-row justify-center items-center"> 
+                                    <a href="https://younesbachouche.github.io/persowebsite/" class="block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+                                    <a href="https://github.com/younesbachouche/persowebsite" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                                </div>
+
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("infinityedu-details")' onmouseout='hideDetails("infinityedu-details")' class="projects infinityedu-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6">
+                        <div id="infinityedu-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">Infinityedung.com</h3>
+                                <p class="mb-2">Frontend for an Educational Consultancy web app.</p>
+                                <h3 class="mb-2">HTML , CSS , JS | Bootstrap , Vue.js</h3>  
+                                <div class="flex flex-row justify-center items-center"> 
+                                    <a href="https://younesbachouche.github.io/profilecard/" class="block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+                                    <a href="https://github.com/younesbachouche/profilecard" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                                </div>
+
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("rossmart-details")' onmouseout='hideDetails("rossmart-details")' class="projects rossmart-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6 md:mb-0">
+                        <div id="rossmart-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">Manzidochn9olohaka</h3>
+                                <p class="mb-2">Manzidochn9olohaka</p>
+                                <h3 class="mb-2">HTML , CSS</h3>  
+                                <div class="flex flex-row justify-center items-center"> 
+                                    <a href="https://younesbachouche.github.io/Manzidochn9olohaka/" class="block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+                                    <a href="https://github.com/younesbachouche/Manzidochn9olohaka" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                                </div>
+
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("starwars-details")' onmouseout='hideDetails("starwars-details")' class="projects starwars-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6 md:mb-0">
+                        <div id="starwars-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">Younes-TV</h3>
+                                <p class="mb-2">Live Streaming Desktop App</p>
+                                <h3 class="mb-2">Visual Basic</h3>  
+                                <div class="flex flex-row justify-center items-center"> 
+                                    <a href="#" class="block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+                                    <a href="https://github.com/younesbachouche/Younes-TV" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                                </div>
+
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div onmouseover='showDetails("cityexplorer-details")' onmouseout='hideDetails("cityexplorer-details")' class="projects cityexplorer-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer">
+                        <div id="cityexplorer-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
+                            <div>
+                                <h3 class="text-base text-white font-semibold mb-1">Algeria TV</h3>
+                                <p class="mb-2">Live TV App for Algerian Channels</p>
+                                <h3 class="mb-2">java</h3>  
+                                <div class="flex flex-row justify-center items-center"> 
+                                    <a href="https://play.google.com/store/apps/details?id=algeria.tv8" class="block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">View</a>
+                                    <a href="https://play.google.com/store/apps/details?id=algeria.tv8" class="block text-portred hover:text-red-800"><i class="fa-3x fab fa-github-square"></i></a>
+                                </div>
+
+                            </div>
+                        </div>  
+                    </div>
+                    
+
+                </div>
+
+                <!-- Second row of most important projects -->
+                <div id="second-row" class=" grid-cols-1 md:grid-cols-3 gap-3 works-div pb-10 px-4 hidden">
+                    <!-- individual projects div -->
+              
+
+                
+
+            </div>
+
+            <!-- link to choose to show more or less -->
+            <div class="flex justify-center items-center my-6">
+                <button onclick="showProjects()" id="more-projects" class="focus:outline-none block py-2 px-4 md:px-8 bg-transparent border border-portred text-white hover:border-none hover:bg-portred">See&nbsp;<span id="more" class="more">More</span><span id="less" class="less hidden">Less</span></button>
+            </div>
+        </section>
+
+        <!--=End of Works Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <!--=Contact Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <section id="contact" class="contact py-16 px-8 md:px-12 lg:px-20 flex flex-col md:flex-row bg-portgrey">
+            <div class="w-full md:w-1/2 mb-12 md:mb-0 lg:py-10 md:pr-16" data-aos="fade-up-right" data-aos-duration="3000">
+                <h1 class="text-2xl md:text-3xl">Let's&nbsp;Talk</h1>
+                <p class="mb-4 lg:mb-8"><svg width="78" height="3" viewBox="0 0 78 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="78" height="3" fill="url(#paint0_linear)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="0" y1="1.5" x2="78" y2="1.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FE2D2D"/>
+                    <stop offset="1" stop-color="#ED2F1C"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                </p>
+                <div id="alertbox" class="confirm-message rounded bg-green-700 p-4 hidden">
+                    <p>Hey👋,I got your message.Will revert soonest.</p>
+                </div>
+                <form action="" class="contact-form mt-12" id="contact-form">
+                    <p class="mb-3">Shoot me a message at &nbsp;<a class="text-portred underline text-base" href="mailto:yunes.dev@gmail.com">yunes.dev@gmail.com&nbsp;</a> or fill the form below</p>
+                    
+                    <div class="mb-6">
+                        <input required type="text" id="name" name="name" placeholder="Name" class="text-white block w-full bg-transparent border border-portred border-t-0 
+                        border-l-0 border-r-0 focus:bg-transparent focus:outline-none placeholder-white py-2 ">
+                    </div>
+                    <div class="mb-6">
+                        <input required type="email" id="email" name="email" placeholder="Email" class="text-white block w-full bg-transparent border border-portred border-t-0 
+                        border-l-0 border-r-0 focus:bg-transparent focus:outline-none placeholder-white py-2 ">
+                    </div>
+                    <div class="mb-6">
+                        <textarea required type="text" rows="2" id="message" name="message" placeholder="Message" class="text-white block w-full bg-transparent border border-portred border-t-0 
+                        border-l-0 border-r-0 focus:bg-transparent focus:outline-none placeholder-white py-2 "></textarea>
+                    </div>
+                    <div class="mb-2" >
+                        <input id="form-submit" type="submit" class="text-white text-center bg-portred hover:bg-red-800 focus:outline-none py-2 px-4 md:px-8" placeholder="Shoot">
+                    </div>
+
+                </form>
+            </div>
+            <div class="w-full md:w-1/2 pr-6" data-aos="fade-up-left" data-aos-duration="3000">
+                <img class="h-3/4 lg:h-8/12" src="assets/images/contact.svg" alt="contact image">
+            </div>
+        </section>
+
+        <!--=End of Contact Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <!--=Footer Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <footer class=" px-8 md:px-12 lg:px-20 py-8">
+            <div class="text-center">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="mb-3 mr-3"><a href="https://twitter.com/younes_uvl07"><img class="h-8" src="assets/images/twitter.svg" alt="twitter icon"></a></div>
+                    <div class="mb-3 mr-3"><a href="https://www.linkedin.com/in/younesbachouche/"><img class="h-8" src="assets/images/linkedin.svg" alt="linkedin icon"></a></div>
+                    <div class="mb-3 mr-3"><a href="https://github.com/younesbachouche"><img class="h-8" src="assets/images/github.svg" alt="github icon"></a></div>
+                    <div class="mb-3 mr-3"><a href="mailto:yunes.dev@gmail.com"><img class="h-8" src="assets/images/email.svg" alt="email icon"></a></div>
+                </div>
+                <div>
+                    <p class="mb-2">Designed by <a href="https://www.linkedin.com/in/younesbachouche/" class="font-bold hover:text-portred">Younes</a> Bachouche</p>
+                    <p>© Copyright 2021. All right reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <!--=End of footer Section =*/-->
+        <!--=============================================<<<<<-->
+
+        
+        <!-- Font awesome script -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+
+        <!-- AOS SCRIPT -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Initialize AOS -->
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- firebase main-->
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+
+        <!-- firebase realtime database-->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+        <!-- javascript file -->
+        <script src="assets/js/index.js" async defer></script>
+    </body>
+</html>
